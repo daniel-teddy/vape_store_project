@@ -1,0 +1,18 @@
+{
+    "name": "climate-change-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "fetch.js",
+    "scripts": {
+      "start": "nodemon fetch.js"
+    },
+    "author": "ania kubow",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^0.21.4",
+      "cheerio": "^1.0.0-rc.10",
+      "express": "^4.17.1",
+      "nodemon": "^2.0.20"
+    }
+  }
+  
