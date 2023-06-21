@@ -2,11 +2,57 @@
     z-index: 1000;
 }
 .glass{
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 1001;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9px);
+-webkit-backdrop-filter: blur(9px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
+.spinners {
+    width: 60px;
+    height: 60px;
+    position: relative;
+   }
+   
+   .spinners .dot {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+   }
+   
+   .spinners .dot::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #1f2937;
+   }
+   
+   @keyframes spin {
+    to {
+     transform: rotate(360deg);
+    }
+   }
+   
+   .spinners .dot {
+    animation: spin 2s infinite;
+   }
+   
+   .spinners .dot:nth-child(2) {
+    animation-delay: 100ms;
+   }
+   
+   .spinners .dot:nth-child(3) {
+    animation-delay: 200ms;
+   }
+   
+   .spinners .dot:nth-child(4) {
+    animation-delay: 300ms;
+   }
+   
+   .spinners .dot:nth-child(5) {
+    animation-delay: 400ms;
+   }
